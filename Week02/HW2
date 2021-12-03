@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "51955e87-0573-4224-9f2b-881f912a5631",
+		"name": "User Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create With List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 1,\n    \"username\": \"esra.geneci\",\n    \"firstName\": \"esra\",\n    \"lastName\": \"geneci\",\n    \"email\": \"test.test@gmail.com\",\n    \"password\": \"esra123\",\n    \"phone\": \"1234567\",\n    \"userStatus\": 0\n  },\n   {\n    \"id\": 2,\n    \"username\": \"test.test\",\n    \"firstName\": \"testname\",\n    \"lastName\": \"testlast\",\n    \"email\": \"test.test@test.com\",\n    \"password\": \"test123\",\n    \"phone\": \"98765\",\n    \"userStatus\": 0\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get User with Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/test.test",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"test.test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update User Info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 2,\n    \"username\": \"test2.test2\",\n    \"firstName\": \"testname\",\n    \"lastName\": \"testlast\",\n    \"email\": \"test.test@test.com\",\n    \"password\": \"test123\",\n    \"phone\": \"98765\",\n    \"userStatus\": 0\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/string",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"string"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get User with the updated Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/test2.test2",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"test2.test2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login the User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=esra.geneci&password=esra123",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "esra.geneci"
+						},
+						{
+							"key": "password",
+							"value": "esra123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log out the User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
